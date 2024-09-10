@@ -10,9 +10,9 @@ const InfoTabComponent = ({ details }: { details: IFriendDetails }) => {
     <div>
       <div className="info-entry-title">Bio:</div>
       <div className="info-entry-content mt-2.5">{details.bio}</div>
-      <hr className="info-separator mx-auto my-7" />
+      <hr className="info-separator md:w-[424px] mx-auto my-[25px]" />
       <InfoTabRowComponent title="Phone:" content={details.phone} />
-      <hr className="info-separator mx-auto my-7" />
+      <hr className="info-separator md:w-[424px] mx-auto my-[25px]" />
       <div className="flex flex-col gap-3.5">
         <InfoTabRowComponent title="Address:" content={details.address_1} />
         <InfoTabRowComponent title="City:" content={details.city} />

@@ -4,7 +4,7 @@
 const InfoTabRowComponent = ({ title, content }: { title: string, content: string }) => {
   return (
     <div className="flex flex-row">
-      <div className="info-entry-title w-[228px]">{title}</div>
+      <div className="info-entry-title w-[100px] md:w-[228px]">{title}</div>
       <div>{content}</div>
     </div>
   )

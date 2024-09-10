@@ -19,7 +19,7 @@ const TabsComponent = ({ tabs, childrens, className }: { tabs: string[], childre
           </button>
         ))}
       </div>
-      <div className="tab-content grow p-7">
+      <div className="tab-content grow p-7 custom-scrollbar overflow-y-auto">
         {childrens[selectedTab]}
       </div>
     </div>
