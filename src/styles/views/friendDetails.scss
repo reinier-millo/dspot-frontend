@@ -1,0 +1,30 @@
+.back-btn {
+  width: 44px;
+  height: 44px;
+  top: 60px;
+  left: 292px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  background: #ffffff;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 950px) {
+  .friend-details-box-height {
+    height: 904px;
+    min-height: 904px;
+    max-height: 904px;
+  }
+}
+
+.friend-details-name {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31.47px;
+  margin-top: 23px;
+}

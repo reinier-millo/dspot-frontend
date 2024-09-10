@@ -7,7 +7,7 @@ import FriendListItemComponent from "./FriendListItem";
 
 const FriendListComponent = ({ friends }: { friends: IFriend[] }) => {
   return (
-    <div className="friend-list-container overflow-y-auto">
+    <div className="friend-list-container custom-scrollbar overflow-y-auto">
       <ul className="flex flex-col gap-3.5">
         {friends.map((friend) => (
           <FriendListItemComponent key={`friend-${friend.id}`} friend={friend} />
