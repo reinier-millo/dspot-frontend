@@ -1,0 +1,44 @@
+.friend-item-container {
+  height: 88px;
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0px #CCD0DF80;
+  border-radius: 4px;
+  padding: 14px 24px 14px 14px;  
+  font-weight: 500;
+
+  .friend-item-container-left {
+    margin-left: 14px;
+
+    .friend-item-name {
+      font-size: 16px;
+      color: #000000;
+    }
+
+    .friend-item-status {
+      font-size: 12px;
+      color: #b1b9db;
+      padding: 0px 8px;
+      border-radius: 20px;
+      border: 1px solid #b1b9db;
+      width: fit-content;
+    }
+  }
+
+  .friend-item-container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .friend-item-container-cta {
+    height: 40px;
+    font-size: 16px;
+    color: #ffff;
+    background: #2e57fa;
+    border-radius: 4px;
+    border: 1px solid #0637f9;
+    padding: 8px 20px 8px 20px;
+    gap: 8px;
+  }
+}
