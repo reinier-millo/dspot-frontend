@@ -19,3 +19,12 @@ jobs:
 
       - name: Run lint
         run: npm run lint
+
+      - name: Install serve for testing
+        run: npm i -g serve
+
+      - name: Run cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: serve -s build

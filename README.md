@@ -59,4 +59,14 @@ npm run lint -- --fix
 
 ## Testing
 
-TBD
+To run the tests you need to run first the web page and then:
+
+```bash
+npm run test
+```
+
+Tests can be executed directly from Cypress:
+
+```bash
+npm run cypress:open
+```
