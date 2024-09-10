@@ -8,6 +8,9 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/700.css";
 
+// Include additional styles
+@import "./ui/_box";
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
