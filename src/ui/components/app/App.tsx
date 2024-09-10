@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const dispatch = useDispatch();
 
-  /* Fetch friends from the API when the component is mounted. 
+  /* Fetch friends from the API when the component is mounted.
   This is used to populate the friends list when loading details page directly. */
   useEffect(() => {
     const fetchFriends = async () => {

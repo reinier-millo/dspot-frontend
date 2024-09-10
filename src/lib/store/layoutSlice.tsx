@@ -1,7 +1,7 @@
 /**
  * Layout store slice to keep the current layout state.
  */
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState: {
   showBackBtn: boolean,
@@ -14,7 +14,7 @@ const layoutSlice = createSlice({
   initialState,
   reducers: {
     setShowBackBtn: (state, action) => {
-      state.showBackBtn = action.payload
+      state.showBackBtn = action.payload;
     },
   },
 });

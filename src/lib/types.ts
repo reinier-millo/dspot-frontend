@@ -1,4 +1,3 @@
-
 export interface IFriend {
   id: number;
   img: string;

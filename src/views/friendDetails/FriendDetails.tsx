@@ -1,20 +1,20 @@
 /**
  * View to display friend details.
  */
-import "../../styles/views/friendDetails.scss";
+import '../../styles/views/friendDetails.scss';
 import React, { useEffect, useState } from 'react';
-import { setShowBackBtn } from '../../lib/store/layoutSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { IRootState } from '../../lib/store';
 import { useParams } from 'react-router-dom';
+import { setShowBackBtn } from '../../lib/store/layoutSlice';
+import { IRootState } from '../../lib/store';
 import { getFriendDetails } from '../../lib/api/friends';
 import { IFriend, IFriendDetails } from '../../lib/types';
-import AvatarComponent from "../../ui/components/avatar/Avatar";
-import TabsComponent from "../../ui/components/tabs/tabs";
-import InfoTabComponent from "../../ui/components/infoTab/InfoTab";
-import LoadingSpinnerComponent from "../../ui/components/loadingSpinner/LoadingSpinner";
-import PhotosTabComponent from "../../ui/components/photosTab/PhotosTab";
-import BackButtonComponent from "../../ui/components/backButton/BackButton";
+import AvatarComponent from '../../ui/components/avatar/Avatar';
+import TabsComponent from '../../ui/components/tabs/tabs';
+import InfoTabComponent from '../../ui/components/infoTab/InfoTab';
+import LoadingSpinnerComponent from '../../ui/components/loadingSpinner/LoadingSpinner';
+import PhotosTabComponent from '../../ui/components/photosTab/PhotosTab';
+import BackButtonComponent from '../../ui/components/backButton/BackButton';
 
 const FriendDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,7 +23,6 @@ const FriendDetails: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [friendDetails, setFriendDetails] = useState<IFriendDetails | undefined>();
   const dispatch = useDispatch();
-
 
   /* Friend details will show the back button */
   useEffect(() => {
@@ -35,7 +34,7 @@ const FriendDetails: React.FC = () => {
     setIsLoading(true);
 
     /* Find the index of the target friend */
-    const targetIdx = friends.findIndex((friend) => friend.id === parseInt(id!));
+    const targetIdx = friends.findIndex((friend) => friend.id === parseInt(id!, 10));
     setTargetFriend(targetIdx);
 
     const fetchFriendDetails = async () => {
@@ -45,7 +44,6 @@ const FriendDetails: React.FC = () => {
     };
     fetchFriendDetails();
   }, [id, dispatch, friends]);
-
 
   return (
     <div className="h-full flex flex-row">
@@ -59,9 +57,18 @@ const FriendDetails: React.FC = () => {
         <div className="flex flex-col w-full h-full">
           {isLoading ? <LoadingSpinnerComponent /> : <>
             <AvatarComponent size="big" friend={friends[targetFriend]} />
-            <div className="friend-details-name">{friends[targetFriend].first_name} {friends[targetFriend].last_name}</div>
+            <div className="friend-details-name">
+              {friends[targetFriend].first_name} {friends[targetFriend].last_name}
+            </div>
             <div className="box-status mt-2.5">{friends[targetFriend].status}</div>
-            <TabsComponent className="mt-[30px] grow overflow-y-auto" tabs={["Info", "Photos"]} childrens={[<InfoTabComponent details={friendDetails!} />, <PhotosTabComponent details={friendDetails!} />]} />
+            <TabsComponent
+              className="mt-[30px] grow overflow-y-auto"
+              tabs={['Info', 'Photos']}
+              childrens={[
+                <InfoTabComponent details={friendDetails!} />,
+                <PhotosTabComponent details={friendDetails!} />,
+              ]}
+            />
           </>}
         </div>
       </div>

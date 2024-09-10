@@ -1,10 +1,10 @@
 /**
  * Component to display a friend's entry in the list.
  */
-import "../../../styles/components/friendListItem.scss";
-import { IFriend } from "../../../lib/types";
-import AvatarComponent from "../avatar/Avatar";
-import { useNavigate } from "react-router-dom";
+import '../../../styles/components/friendListItem.scss';
+import { useNavigate } from 'react-router-dom';
+import { IFriend } from '../../../lib/types';
+import AvatarComponent from '../avatar/Avatar';
 
 const FriendListItemComponent = ({ friend }: { friend: IFriend }) => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const FriendListItemComponent = ({ friend }: { friend: IFriend }) => {
   /* Show the friend details page */
   const showDetails = () => {
     navigate(`/${friend.id}/details`);
-  }
+  };
 
   return (
     <li className="flex justify-between friend-item-container">
@@ -27,7 +27,7 @@ const FriendListItemComponent = ({ friend }: { friend: IFriend }) => {
         <button className="friend-item-container-cta" onClick={() => showDetails()}>Details</button>
       </div>
     </li>
-  )
-}
+  );
+};
 
 export default FriendListItemComponent;

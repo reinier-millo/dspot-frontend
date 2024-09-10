@@ -1,7 +1,7 @@
 /**
  * View to display the list of friends.
  */
-import "../../styles/views/friendsList.scss";
+import '../../styles/views/friendsList.scss';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IRootState } from '../../lib/store';
@@ -12,7 +12,7 @@ import FriendListComponent from '../../ui/components/friendList/FriendList';
 
 const FriendsList: React.FC = () => {
   const friends = useSelector((state: IRootState) => state.friends.friends);
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   /* Friends list will not show the back button */
   useEffect(() => {

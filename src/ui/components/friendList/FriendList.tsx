@@ -1,12 +1,11 @@
 /**
  * Component to display a list of friends.
  */
-import "../../../styles/components/friendList.scss";
-import { IFriend } from "../../../lib/types";
-import FriendListItemComponent from "./FriendListItem";
+import '../../../styles/components/friendList.scss';
+import { IFriend } from '../../../lib/types';
+import FriendListItemComponent from './FriendListItem';
 
-const FriendListComponent = ({ friends }: { friends: IFriend[] }) => {
-  return (
+const FriendListComponent = ({ friends }: { friends: IFriend[] }) => (
     <div className="friend-list-container custom-scrollbar overflow-y-auto">
       <ul className="flex flex-col gap-3.5">
         {friends.map((friend) => (
@@ -14,7 +13,6 @@ const FriendListComponent = ({ friends }: { friends: IFriend[] }) => {
         ))}
       </ul>
     </div>
-  )
-}
+);
 
 export default FriendListComponent;

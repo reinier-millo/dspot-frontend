@@ -1,12 +1,11 @@
 /**
  * Friend details info tab component
  */
-import "../../../styles/components/infoTab.scss";
-import { IFriendDetails } from "../../../lib/types";
-import InfoTabRowComponent from "./InfoTabRow";
+import '../../../styles/components/infoTab.scss';
+import { IFriendDetails } from '../../../lib/types';
+import InfoTabRowComponent from './InfoTabRow';
 
-const InfoTabComponent = ({ details }: { details: IFriendDetails }) => {
-  return (
+const InfoTabComponent = ({ details }: { details: IFriendDetails }) => (
     <div>
       <div className="info-entry-title">Bio:</div>
       <div className="info-entry-content mt-2.5">{details.bio}</div>
@@ -21,7 +20,6 @@ const InfoTabComponent = ({ details }: { details: IFriendDetails }) => {
         <InfoTabRowComponent title="State:" content={details.state} />
       </div>
     </div>
-  )
-}
+);
 
 export default InfoTabComponent;

@@ -3,8 +3,8 @@
  * to reduce the perception of delay when the user return to friends
  * list after navigating to a friend detail page.
  */
-import { createSlice } from "@reduxjs/toolkit";
-import { IFriend } from "../types";
+import { createSlice } from '@reduxjs/toolkit';
+import { IFriend } from '../types';
 
 const initialState: {
   friends: IFriend[],
@@ -19,10 +19,10 @@ const friendsSlice = createSlice({
   initialState,
   reducers: {
     setFriends: (state, action) => {
-      state.friends = action.payload
+      state.friends = action.payload;
     },
     setTargetFriend: (state, action) => {
-      state.targetFriend = action.payload
+      state.targetFriend = action.payload;
     }
   },
 });

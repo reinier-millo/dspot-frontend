@@ -1,10 +1,18 @@
 /**
  * Tabs component
  */
-import "../../../styles/components/tabs.scss";
-import { useState } from "react";
+import '../../../styles/components/tabs.scss';
+import { useState } from 'react';
 
-const TabsComponent = ({ tabs, childrens, className }: { tabs: string[], childrens: React.ReactNode[], className?: string }) => {
+const TabsComponent = ({
+  tabs,
+  childrens,
+  className,
+}: {
+  tabs: string[];
+  childrens: React.ReactNode[];
+  className?: string;
+}) => {
   const [selectedTab, setSelectedTab] = useState(0);
   return (
     <div className={`flex flex-col ${className}`}>
@@ -23,7 +31,7 @@ const TabsComponent = ({ tabs, childrens, className }: { tabs: string[], childre
         {childrens[selectedTab]}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default TabsComponent;
