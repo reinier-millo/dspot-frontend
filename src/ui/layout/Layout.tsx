@@ -10,7 +10,7 @@ const Layout = () => {
 
   return (
     <div className='flex h-screen w-screen'>
-      <div className={showBackBtn ? '' : 'w-full h-full my-auto mx-auto md:w-[70%] md:h-[60%] lg:w-[50%] xl:w-[40%]'}>
+      <div className={`w-full h-full my-auto mx-auto ${showBackBtn ? 'lg:w-[856px] friend-details-box-height' : 'md:w-[714px] friends-list-box-height'}`}>
         <Outlet />
       </div>
     </div>
