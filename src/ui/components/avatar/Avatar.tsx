@@ -1,13 +1,14 @@
 /**
  * Avatar component to display a user's profile picture and online status.
  */
+import { IFriend } from "../../../lib/types";
 import "../../../styles/components/avatar.scss";
 
-const AvatarComponent = ({ size, img, title, active }: { size: "big" | "small", img: string, title?: string, active: boolean }) => {
+const AvatarComponent = ({ size, friend }: { size: "big" | "small", friend: IFriend }) => {
   return (
     <div className={`avatar-container avatar-container__${size}`}>
-      <img alt={title} title={title} src={img} className="avatar-image" />
-      {active && <div className="avatar-status" />}
+      <img alt={`${friend.first_name} ${friend.last_name}`} title={`${friend.first_name} ${friend.last_name}`} src={friend.img} className="avatar-image" />
+      {friend.available && <div className="avatar-status" />}
     </div>
   )
 }
