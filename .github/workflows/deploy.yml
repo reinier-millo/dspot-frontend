@@ -1,0 +1,31 @@
+name: Deploy to server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check deployment settings
+        run: |
+          if [ -z "${{ secrets.REMOTE_HOST }}" ]; then
+            echo "Deployment settings not configured. Ignoring deployment"
+            exit 1
+          fi
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 8080
+          script: |
+            cd /home/${{ secrets.REMOTE_USER }}/dspot-frontend
+            GIT_SSH_COMMAND='ssh -i ${{ secrets.SSH_DEPLOY }}' git pull
+            docker build -t dspot-frontend .
+            date > .timestamp
