@@ -1,3 +1,6 @@
+/**
+ * Component to display a friend's entry in the list.
+ */
 import "../../../styles/components/friendListItem.scss";
 import { IFriend } from "../../../lib/types";
 import AvatarComponent from "../avatar/Avatar";

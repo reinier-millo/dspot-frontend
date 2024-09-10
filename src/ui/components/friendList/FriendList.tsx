@@ -1,3 +1,6 @@
+/**
+ * Component to display a list of friends.
+ */
 import "../../../styles/components/friendList.scss";
 import { IFriend } from "../../../lib/types";
 import FriendListItemComponent from "./FriendListItem";
