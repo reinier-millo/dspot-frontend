@@ -8,7 +8,7 @@ export interface IFriend {
   available: boolean;
 }
 
-export interface IFriendDetail extends IFriend {
+export interface IFriendDetails extends IFriend {
   phone: string;
   address_1: string;
   city: string;
