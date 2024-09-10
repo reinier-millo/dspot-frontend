@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { IFriend, IFriendDetails } from '../types';
 
-const FRIENDS_LIST_URL = 'http://private-5bdb3-friendmock.apiary-mock.com/friends';
-const FRIEND_DETAIL_URL = 'http://private-5bdb3-friendmock.apiary-mock.com/friends/id';
+const FRIENDS_LIST_URL = 'https://private-5bdb3-friendmock.apiary-mock.com/friends';
+const FRIEND_DETAIL_URL = 'https://private-5bdb3-friendmock.apiary-mock.com/friends/id';
 
 const PHOTOS = [
   // eslint-disable-next-line max-len
