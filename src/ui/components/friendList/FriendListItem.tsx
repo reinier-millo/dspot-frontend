@@ -17,10 +17,10 @@ const FriendListItemComponent = ({ friend }: { friend: IFriend }) => {
   return (
     <li className="flex justify-between friend-item-container">
       <div className="flex ">
-        <AvatarComponent size="small" img={friend.img} title={`${friend.first_name} ${friend.last_name}`} active={friend.available} />
+        <AvatarComponent size="small" friend={friend} />
         <div className="friend-item-container-left flex flex-col justify-center">
           <div className="friend-item-name">{friend.first_name} {friend.last_name}</div>
-          <div className="hidden sm:flex friend-item-status">{friend.status}</div>
+          <div className="hidden sm:flex box-status">{friend.status}</div>
         </div>
       </div>
       <div className="flex flex-col justify-center">

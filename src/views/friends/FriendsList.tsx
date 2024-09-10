@@ -12,7 +12,7 @@ import FriendListComponent from '../../ui/components/friendList/FriendList';
 
 const FriendsList: React.FC = () => {
   const friends = useSelector((state: IRootState) => state.friends.friends);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
   /* Friends list will not show the back button */
   useEffect(() => {
@@ -30,7 +30,7 @@ const FriendsList: React.FC = () => {
   }, [dispatch]);
 
   return (
-    <div className="friends-list-view-container h-full">
+    <div className="box-container h-full">
       <div className="friends-list-view-title mb-3.5">Friends</div>
       <FriendListComponent friends={friends} />
     </div>
